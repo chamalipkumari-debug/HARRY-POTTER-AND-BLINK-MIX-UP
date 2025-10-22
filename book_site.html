@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book download — Harry Potter & Blink Mix-up</title>
+  <style>
+    body{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; padding:24px; background:#f6f7fb; color:#111}
+    .container{max-width:980px;margin:0 auto}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:6px 0 18px;color:#333}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+    a.button{
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:10px;
+      box-shadow:0 2px 0 rgba(0,0,0,0.06);
+      background:#1f6feb;color:white;font-weight:600;
+    }
+    a.button.secondary{background:#e6eefc;color:#1f3a6b}
+    .viewer{
+      border:1px solid #e1e4ea;
+      border-radius:8px;
+      height:72vh;
+      overflow:hidden;
+      background:white;
+    }
+    .note{font-size:13px;color:#555;margin-top:10px}
+    footer{margin-top:14px;font-size:13px;color:#666}
+    @media (max-width:600px){ .viewer{height:60vh} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Harry Potter & Blink Mix-up — Download page</h1>
+    </header>
+
+    <p class="lead">Your PDF is embedded below. Click <strong>Download PDF</strong> to save a copy to your device.</p>
+
+    <div class="buttons">
+      <!-- The download attribute forces browser to download instead of opening in new tab -->
+      <a class="button" href="book.pdf" download="HarryPotter_Blink_Mixup.pdf">⬇️ Download PDF</a>
+      <!-- Open in new tab -->
+      <a class="button secondary" href="book.pdf" target="_blank" rel="noopener">Open in new tab</a>
+    </div>
+
+    <div class="viewer" role="region" aria-label="PDF viewer">
+      <!-- Embedded PDF viewer: works in most modern browsers -->
+      <iframe src="book.pdf" style="width:100%;height:100%;border:0" title="Book PDF"></iframe>
+    </div>
+
+    <p class="note">
+      If the PDF doesn't display, click the <em>Download PDF</em> button above. 
+      <strong>Important:</strong> Keep <code>book_site.html</code> and <code>book.pdf</code> in the same folder so the link works.
+    </p>
+
+    <footer>
+      To use: 1) Save this file as <code>book_site.html</code> (Notepad → Save as → All Files). 
+      2) Put <code>book.pdf</code> in the same folder. 
+      3) Double-click the HTML file to open it in your browser.
+    </footer>
+  </div>
+</body>
+</html>
